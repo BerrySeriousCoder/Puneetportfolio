@@ -1,65 +1,138 @@
-import Image from "next/image";
+import { ProjectCard } from "@/components/ProjectCard";
+import { InstagramEmbed } from "@/components/InstagramEmbed";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-white text-black p-4 md:p-8 lg:p-12 uppercase">
+      {/* Header Section */}
+      <header className="flex flex-col lg:flex-row justify-between items-start w-full mb-16 lg:mb-32">
+        <div className="w-full lg:w-1/2">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-none tracking-tighter mb-4">
+            PUNEET MANN, CREATIVE <br /> DIRECTOR & DESIGNER
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        <div className="w-full lg:w-1/2 flex flex-col md:flex-row justify-between items-start mt-8 lg:mt-0 text-xs md:text-sm">
+          <div className="w-full md:w-1/2 pr-4 mb-8 md:mb-0">
+            <div className="mb-4 font-bold">[ * ] ABOUT</div>
+            <p className="leading-relaxed normal-case max-w-sm">
+              I work across the full visual spectrum for GNH and its venues, building static and carousel content, directing shoots and improvising their instagram presence and other collaterals like coffee table books, lanyards etc while refining the website to keep everything aligned and alive.
+            </p>
+          </div>
+          
+          <div className="w-full md:w-1/2 flex flex-col gap-8">
+            <div>
+              <div className="mb-4 font-bold">[ * ] CONTACT</div>
+              <div>
+                <a href="mailto:puneetsharma1335@gmail.com" className="hover:underline">
+                  [ * ] EMAIL ME
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </header>
+
+      {/* Main Content Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+        
+        {/* Left Column - GNH & Specifics */}
+        <div className="flex flex-col gap-16">
+          <section>
+            <h2 className="text-xl font-bold mb-8 flex items-center border-b border-black pb-4">
+              [ * ] GNH HOTELS & VENUES
+            </h2>
+            <div className="flex flex-col gap-2">
+              <ProjectCard 
+                title="GNH HOTELS (WEBSITE)" 
+                roles="Full Visual Spectrum, Collaterals, Website Refinement" 
+                link="https://www.gnhhotels.com/" 
+              />
+              <ProjectCard 
+                title="ADOT GNH" 
+                roles="Static & Carousel Content, Shoot Direction, Instagram Presence" 
+                link="https://www.instagram.com/adotgnh/" 
+              />
+              <ProjectCard 
+                title="NIKUNJ GNH" 
+                roles="Instagram Presence & Shoot Direction" 
+                link="https://www.instagram.com/nikunjgnh/" 
+              />
+              <ProjectCard 
+                title="GNH CONVENTION" 
+                roles="Instagram Presence & Shoot Direction" 
+                link="https://www.instagram.com/gnhconvention/" 
+              />
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-8 flex items-center border-b border-black pb-4">
+              [ * ] MANISH MALHOTRA X ADOT
+            </h2>
+            <div className="mt-4">
+              <InstagramEmbed url="https://www.instagram.com/p/DYUQXqRCDao/" />
+            </div>
+          </section>
+        </div>
+
+        {/* Right Column - Other Work */}
+        <div className="flex flex-col gap-16">
+          <section>
+            <h2 className="text-xl font-bold mb-8 flex items-center border-b border-black pb-4">
+              [ * ] SELECTED BRANDS
+            </h2>
+            <div className="flex flex-col gap-2">
+              <ProjectCard 
+                title="HOUSE OF MONERO" 
+                roles="Branding, Statics, Carousels, Digital & Collateral Assets and Shoot Direction" 
+                link="https://www.instagram.com/houseofmonero/" 
+              />
+              <ProjectCard 
+                title="THE PRIMULAS" 
+                roles="Statics, Carousels, Digital & Collateral Assets and Shoot Direction" 
+                link="https://www.instagram.com/theprimulas/?hl=en" 
+              />
+              <ProjectCard 
+                title="MEHARVILLAS DELHI" 
+                roles="Statics, Carousels and Shoot Direction" 
+                link="https://www.instagram.com/meharvillas_delhi/?hl=en" 
+              />
+              <ProjectCard 
+                title="KATALYST WORLD" 
+                roles="Digital & Collateral Assets" 
+                link="https://www.instagram.com/katalystworld/" 
+              />
+              <ProjectCard 
+                title="101 CIRCLE" 
+                roles="Instagram Presence" 
+                link="https://www.instagram.com/the101circle?igsh=MTVqazI2ZDVjaWlqOQ==" 
+              />
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-8 flex items-center border-b border-black pb-4">
+              [ * ] EXTRAS
+            </h2>
+            <div className="flex flex-col gap-2">
+              <ProjectCard 
+                title="COLLABOARD.IN" 
+                roles="DLF Influencer Shoot Direction (for DLF Campaign Advertising)" 
+                link="https://www.instagram.com/collaboard.in/" 
+              />
+            </div>
+          </section>
+
+          <section className="mt-8 border border-black p-8 text-sm">
+            <p className="normal-case">
+              Other work is confidential and not live at the moment, so I cannot share it as of now. Thank you!
+            </p>
+          </section>
+        </div>
+
+      </div>
+    </main>
   );
 }

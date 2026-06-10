@@ -15,18 +15,18 @@ export default function Home() {
         
         <div className="w-full lg:w-1/2 flex flex-col md:flex-row justify-between items-start mt-8 lg:mt-0 text-xs md:text-sm">
           <div className="w-full md:w-1/2 pr-4 mb-8 md:mb-0">
-            <div className="mb-4 font-bold">[ * ] ABOUT</div>
-            <p className="leading-relaxed normal-case max-w-sm">
-              I work across the full visual spectrum for GNH and its venues, building static and carousel content, directing shoots and improvising their instagram presence and other collaterals like coffee table books, lanyards etc while refining the website to keep everything aligned and alive.
-            </p>
+            <div className="mb-4 font-bold">[ * ] CLIENTS WORK</div>
           </div>
           
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <div>
               <div className="mb-4 font-bold">[ * ] CONTACT</div>
-              <div>
+              <div className="flex flex-col gap-2">
                 <a href="mailto:puneetsharma1335@gmail.com" className="hover:underline">
-                  [ * ] EMAIL ME
+                  [ * ] PUNEETSHARMA1335@GMAIL.COM
+                </a>
+                <a href="tel:+917065703661" className="hover:underline tracking-widest">
+                  [ * ] +91 7065703661
                 </a>
               </div>
             </div>

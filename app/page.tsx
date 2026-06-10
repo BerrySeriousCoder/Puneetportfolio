@@ -127,7 +127,7 @@ export default function Home() {
 
           <section className="mt-8 border border-black p-8 text-sm">
             <p className="normal-case">
-              Other work is confidential and not live at the moment, so I cannot share it as of now. Thank you!
+              Other work is confidential and on-progress to put online however it will be added here as soon as it gets live by the clients.
             </p>
           </section>
         </div>
